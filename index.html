@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Card</title>
+    
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2ecc71 0%, #95a5a6 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Card Container */
+        .card-container {
+            background: #3d2645;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        /* Hover Effect - Scale and Enhanced Shadow */
+        .card-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Profile Image */
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2ecc71;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            box-shadow: 0 10px 30px rgba(46, 204, 113, 0.3);
+        }
+
+        /* Student Name */
+        .student-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        /* Stream/Major */
+        .stream {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2ecc71;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* Divider */
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #2ecc71, transparent);
+            margin: 20px 0;
+        }
+
+        /* Bio/Description */
+        .bio {
+            font-size: 15px;
+            color: #e0e0e0;
+            line-height: 1.6;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        /* Action Buttons (Optional) */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.3);
+        }
+
+        .btn-secondary {
+            background: #2ecc71;
+            color: #3d2645;
+            border: 2px solid #2ecc71;
+        }
+
+        .btn-secondary:hover {
+            background: transparent;
+            color: #2ecc71;
+            transform: translateY(-2px);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .card-container {
+                padding: 30px 20px;
+            }
+
+            .student-name {
+                font-size: 24px;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 20px;
+            }
+
+            .bio {
+                font-size: 14px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Student Profile Card -->
+    <div class="card-container">
+        <!-- Profile Image Placeholder -->
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaXRlcmFwaWR8fHx8fHx8fHw%3D%3D&w=500&q=60" 
+             alt="Student Profile" 
+             class="profile-image">
+
+        <!-- Student Name - UCSC -->
+        <h1 class="student-name">UCSC</h1>
+
+        <!-- Stream/Major -->
+        <p class="stream">Computer Science</p>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Student Bio -->
+        <p class="bio">
+            A brief description of your academic journey, interests, and aspirations. 
+            Share what makes you unique as a student at UCSC.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <button class="btn btn-primary">View Profile</button>
+            <button class="btn btn-secondary">Connect</button>
+        </div>
+    </div>
+</body>
+</html>
